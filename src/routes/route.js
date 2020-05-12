@@ -1,11 +1,11 @@
 const express = require("express");
-const router = express.Router();
+const app = express.Router();
 
-router.get("/", (req, res, next) => {
+app.get("/", (req, res, next) => {
   res.status(200).send({
     title: "Node ZoozTech API",
-    version: "0.0.1"
+    version: "0.0.1",
   });
 });
 
-module.exports = router;
+module.exports = app;

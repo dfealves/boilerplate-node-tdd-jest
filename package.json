@@ -4,22 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./bin/server.js",
+    "test": "jest",
+    "secure-mode": "jest --watch --verbose=true",
+    "dev": "nodemon ./bin/server.js --ignore __tests__",
     "start": "node ./bin/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",
-    "mongoose": "^5.9.6"
+    "mongoose": "^5.9.6",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "jest": "^26.0.1",
+    "mongodb-memory-server": "^6.6.0",
+    "nodemon": "^2.0.3"
   }
 }
