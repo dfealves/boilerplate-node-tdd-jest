@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "secure-mode": "jest --watch --verbose=true",
     "dev": "nodemon ./bin/server.js --ignore __tests__",
     "start": "node ./bin/server.js"
@@ -20,12 +20,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",
+    "mongodb-memory-server": "^6.6.0",
     "mongoose": "^5.9.6",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "jest": "^26.0.1",
-    "mongodb-memory-server": "^6.6.0",
     "nodemon": "^2.0.3"
   }
 }

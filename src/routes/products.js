@@ -8,7 +8,9 @@ router.post("/", ProductController.create);
 
 router.put("/:id", ProductController.update);
 
-router.delete("/", ProductController.delete);
+router.delete("/:id", ProductController.delete);
+
+router.get("/:id", ProductController.profile);
 
 // router.get("/", (req, res) => {
 //   const products = [
