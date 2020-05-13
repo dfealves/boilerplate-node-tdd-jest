@@ -4,33 +4,17 @@ const Schema = mongoose.Schema;
 const schema = new Schema({
   title: {
     type: String,
-
-    trim: true,
+    required: true,
   },
-  slug: {
-    type: String,
 
-    trim: true,
-    index: true,
-    unique: true,
-  },
   description: {
     type: String,
+    required: true,
   },
   price: {
     type: Number,
+    required: true,
   },
-  active: {
-    type: Boolean,
-
-    default: true,
-  },
-  tags: [
-    {
-      type: String,
-      required: true,
-    },
-  ],
 });
 
 module.exports = mongoose.model("Product", schema);
